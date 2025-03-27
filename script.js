@@ -211,6 +211,7 @@ function XYZToRGB(X,Y,Z, pigment1, pigment2){
         norm_factor*(0.0556*X-0.2040 * Y + 1.0570 * Z)
     ];
 
+    // TODO fix this, the rgb conversion may already be in sRGB ? 
     // gamma correct linear RGB to sRGB 
     function gamma_corection(channel){
         if (channel <= 0.0031308){
