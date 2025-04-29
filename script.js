@@ -248,6 +248,7 @@ function updateNormal(x, y, pushVector, dist,  radius , strength = 0.01) {
 
     const scale = strength * (1 - dist / radius);
     
+    // *IMPORTANT* TODO fix type error here (cannot read noramlmap of type 0) prob causeing weird normal behavoure
     // push the normal in pusVector direction and weight by distance 
     normalMap[x][y] = [
         normalMap[x][y][0] + pushVector[0] * Math.abs(scale),
